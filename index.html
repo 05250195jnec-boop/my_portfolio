@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sangay Wangmo | Portfolio</title>
+  <meta name="description" content="Portfolio of Sangay Wangmo, a computer system and network student at Jigme Namgyel Engineering College, Bhutan.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    try {
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <!-- NEW: Background Particle Network Canvas -->
+  <canvas id="network-canvas"></canvas>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home">SW<span style="color: var(--primary);"></span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Switch theme" type="button">☀</button>
+      <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav" type="button">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section with Orbit Animation -->
+    <section id="home" class="hero">
+      <div class="hero-photo">
+        <div class="orbit-container">
+          <!-- Animated Rings -->
+          <div class="orbit-ring ring-solid"></div>
+          <div class="orbit-ring ring-dashed"></div>
+          
+          <!-- Floating Icons with Colorful Text -->
+          <div class="floating-icon icon-top-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <span class="icon-label color-cyan">Web Design</span>
+          </div>
+          
+          <div class="floating-icon icon-top-right">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span class="icon-label color-purple">Networking</span>
+          </div>
+          
+          <div class="floating-icon icon-bottom-left">
+            <span style="font-size: 20px;">🐧</span>
+            <span class="icon-label color-yellow">Linux</span>
+          </div>
+          
+          <div class="floating-icon icon-bottom-right">
+            <span style="font-size: 20px;">🐍</span>
+            <span class="icon-label color-green">Python Tkinter</span>
+          </div>
+
+          <!-- Profile Image -->
+          <img src="images/profile.jpg" alt="Portrait of Sangay Wangmo" class="profile-img">
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="hello">HELLO, I'M</p>
+        <h1>Sangay Wangmo</h1>
+        <p class="headline">Computer System and Network Student</p>
+        <p class="intro">I study computer systems and networking at Jigme Namgyel Engineering College. I design web pages, work with MySQL and Python, and love exploring new technologies.</p>
+        
+        <div class="hero-tags">
+          <span class="tag">Networking</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Web Design</span>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn secondary" href="#contact">Get in touch</a>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+          <div class="stat-item">
+            <h3>5+</h3>
+            <p>Projects built</p>
+          </div>
+          <div class="stat-item">
+            <h3>5</h3>
+            <p>Core skills</p>
+          </div>
+          <div class="stat-item">
+            <h3>5</h3>
+            <p>Certificates</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2><span class="line"></span> About Me</h2>
+      <div class="two-col">
+        <div>
+          <p>I am a Computer Systems and Network student at Jigme Namgyel Engineering College with a deep curiosity for how digital systems connect. I enjoy bridging the gap between software and infrastructure—whether that's building responsive websites, creating REST APIs with Node.js, or configuring virtual labs with DHCP, DNS, and HTTPS services.</p>
+          <p>Outside of coursework, I spend my time experimenting with new networking tools, reading about emerging tech, and helping my classmates debug their code.</p>
+          <p><strong>Career goal:</strong> To grow into a versatile Full-Stack Developer or Network Engineer in Bhutan's growing digital sector, building robust applications and the secure networks they run on.</p>
+        </div>
+        <ul class="facts">
+          <li><span>Based in</span> Bhutan</li>
+          <li><span>Studying</span> Jigme Namgyel Engineering College</li>
+          <li><span>Interests</span> Web, backend, networking</li>
+          <li><span>Languages</span> English, Dzongkha</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2><span class="line"></span> Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li><li>Responsive design</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <ul class="chips"><li>Node.js</li><li>Express</li><li>REST APIs</li><li>MySQL</li><li>MVC</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Networking & Linux</h3>
+          <ul class="chips"><li>BGP / eBGP</li><li>ACLs</li><li>Packet Tracer</li><li>DHCP, DNS, SSH</li><li>VirtualBox</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools & Soft Skills</h3>
+          <ul class="chips"><li>Git & GitHub</li><li>VS Code</li><li>Technical writing</li><li>Teamwork</li><li>Problem solving</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2><span class="line"></span> Projects</h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="web" type="button">Web</button>
+        <button class="filter" data-filter="backend" type="button">Backend</button>
+        <button class="filter" data-filter="network" type="button">Networking</button>
+      </div>
+      <div class="project-grid">
+        <article class="project" data-cat="web">
+          <h3>JNEC Events Hub</h3>
+          <p>Multi-page college events website with an events list, registration form with validation, gallery, contact page and a dark mode toggle.</p>
+          <ul class="chips small"><li>HTML</li><li>Bootstrap 5</li><li>JavaScript</li></ul>
+          <div class="links">
+            <a href="https://github.com/05250195jnec-boop/jnec-events-hub" target="_blank" rel="noopener">Repository</a>
+            <a href="https://05250195jnec-boop.github.io/jnec-events-hub/" target="_blank" rel="noopener">Live site</a>
+          </div>
+        </article>
+        <article class="project" data-cat="backend">
+          <h3>Task List REST API</h3>
+          <p>REST API for managing tasks, built three ways: in-memory, MySQL on Aiven, then refactored into an MVC structure.</p>
+          <ul class="chips small"><li>Node.js</li><li>Express</li><li>MySQL</li></ul>
+          <div class="links">
+            <a href="https://github.com/05250195jnec-boop/task-api" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="project" data-cat="network">
+          <h3>Linux Network Services Lab</h3>
+          <p>Virtual lab integrating DHCP, DNS, FTP, HTTPS web server, SSH and syslog across several Linux distributions.</p>
+          <ul class="chips small"><li>VirtualBox</li><li>Linux</li><li>HTTPS</li><li>Syslog</li></ul>
+          <div class="links">
+            <a href="https://github.com/05250195jnec-boop/linux-services-lab" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="project" data-cat="network">
+          <h3>eBGP and ACL Network Design</h3>
+          <p>Packet Tracer topology connecting an organisation to the ISP DrukRent (AS 65100) over eBGP, with ACLs protecting the servers.</p>
+          <ul class="chips small"><li>Packet Tracer</li><li>eBGP</li><li>ACL</li></ul>
+          <div class="links">
+            <a href="https://github.com/05250195jnec-boop/ebgp-acl-design" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="education" class="section">
+      <h2><span class="line"></span> Certificates</h2>
+      
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-tags">
+            <span class="tag-pdf">PDF</span>
+            <span class="tag-provider">COURSERA</span>
+          </div>
+          <h3>Web Design</h3>
+          <div class="cert-preview">
+            <img src="images/couresera.jpeg" alt="Web Design Certificate">
+          </div>
+          <a href="images/couresera.jpeg" target="_blank" class="cert-btn">Open full size</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-tags">
+            <span class="tag-pdf">PDF</span>
+            <span class="tag-provider">PACKT</span>
+          </div>
+          <h3>Linux</h3>
+          <div class="cert-preview">
+            <img src="images/Linux Admin.jpg" alt="Linux Administration Certificate">
+          </div>
+          <a href="images/Linux Admin.jpg" target="_blank" class="cert-btn">Open full size</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-tags">
+            <span class="tag-pdf">PDF</span>
+            <span class="tag-provider">CISCO</span>
+          </div>
+          <h3>Network Switching</h3>
+          <div class="cert-preview">
+            <img src="images/network.jpeg" alt="Network Switching Certificate">
+          </div>
+          <a href="images/network.jpeg" target="_blank" class="cert-btn">Open full size</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-tags">
+            <span class="tag-pdf">PDF</span>
+            <span class="tag-provider">CISCO</span>
+          </div>
+          <h3>Intro to Networks</h3>
+          <div class="cert-preview">
+            <img src="images/intro net.jpg" alt="Intro to Networking Certificate">
+          </div>
+          <a href="images/intro net.jpg" target="_blank" class="cert-btn">Open full size</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-tags">
+            <span class="tag-pdf">PDF</span>
+            <span class="tag-provider">EDUCBA</span>
+          </div>
+          <h3>Python GUI</h3>
+          <div class="cert-preview">
+            <img src="images/python Tkinter.jpg" alt="Python Tkinter Certificate">
+          </div>
+          <a href="images/python Tkinter.jpg" target="_blank" class="cert-btn">Open full size</a>
+        </div>
+      </div>
+
+      <div class="education-history" style="margin-top: 60px;">
+        <h3 style="margin-bottom: 20px; font-family: var(--font-heading);">Education History</h3>
+        <ul class="timeline">
+          <li>
+            <h4>Diploma in Computer System And Network</h4>
+            <p>Jigme Namgyel Engineering College, Royal University of Bhutan</p>
+            <span class="when">2026 to present</span>
+          </li>
+          <li>
+            <h4>Higher secondary education</h4>
+            <p>Desi High School</p>
+            <span class="when">2025</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2><span class="line"></span> Contact</h2>
+      <div class="two-col">
+        <div>
+          <p style="margin-bottom: 20px;">Have a project, internship or question? Send me a message.</p>
+          <ul class="contact-list">
+            <li><span>Email</span> <a href="mailto:05250195.jnec@rub.edu.bt">05250195.jnec@rub.edu.bt</a></li>
+            <li><span>GitHub</span> <a href="https://github.com/05250195jnec-boop" target="_blank" rel="noopener">05250195jnec-boop</a></li>
+            <li><span>LinkedIn</span> <a href="https://www.linkedin.com" target="_blank" rel="noopener">Sangay Wangmo</a></li>
+          </ul>
+        </div>
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <small class="err" id="nameErr"></small>
+          
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <small class="err" id="emailErr"></small>
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <small class="err" id="messageErr"></small>
+          
+          <button class="btn primary" type="submit">Send message</button>
+          <p id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Sangay Wangmo. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+  
+  <button id="toTop" class="to-top" aria-label="Back to top" type="button" hidden>↑</button>
+
+  <!-- Background Music (Hidden Video format for .mp4 support) -->
+  <video id="bg-music" loop style="display: none;">
+    <source src="images/music.mp4" type="video/mp4">
+  </video>
+  <button id="musicToggle" class="music-btn" aria-label="Toggle background music" type="button">🎵</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

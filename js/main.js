@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================
-  // 8. NEW: Interactive Particle Network Canvas
+  // 8. Interactive Particle Network Canvas
   // ==========================================
   const canvas = document.getElementById('network-canvas');
   if (canvas) {
@@ -129,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    // Track mouse for interaction
     window.addEventListener('mousemove', (e) => {
       mouse.x = e.x;
       mouse.y = e.y;
@@ -139,12 +138,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mouse.y = null;
     });
 
-    // Click to spawn new particles
     window.addEventListener('click', (e) => {
       for (let i = 0; i < 4; i++) {
         particles.push(new Particle(e.clientX, e.clientY));
       }
-      // Keep particle count manageable
       if (particles.length > 150) {
         particles.splice(0, 4);
       }
@@ -163,11 +160,9 @@ document.addEventListener("DOMContentLoaded", () => {
         this.x += this.vx;
         this.y += this.vy;
 
-        // Bounce off edges
         if (this.x < 0 || this.x > width) this.vx *= -1;
         if (this.y < 0 || this.y > height) this.vy *= -1;
 
-        // Repel from mouse
         if (mouse.x != null && mouse.y != null) {
           let dx = mouse.x - this.x;
           let dy = mouse.y - this.y;
@@ -185,12 +180,11 @@ document.addEventListener("DOMContentLoaded", () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(234, 179, 8, 0.8)'; // Yellowish dots
+        ctx.fillStyle = 'rgba(234, 179, 8, 0.8)'; 
         ctx.fill();
       }
     }
 
-    // Start with 60 particles
     for (let i = 0; i < 60; i++) {
       particles.push(new Particle());
     }
@@ -204,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (distance < 130) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance/130})`; // Faint white lines
+            ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance/130})`; 
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[a].x, particles[a].y);
             ctx.lineTo(particles[b].x, particles[b].y);
